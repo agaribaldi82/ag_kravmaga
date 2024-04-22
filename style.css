@@ -1,0 +1,591 @@
+
+header {
+    /*background-color: #333;*/
+    background-size: cover;
+    font-family: 'Arial', sans-serif; /* Tipo de fuente */
+    margin: 0;
+    color: whitesmoke;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+body {
+    background-image: linear-gradient(to right, black, rgb(40, 39, 37));
+    color: white;
+    text-align: center;
+
+#nav{
+    background-color: #F8680C;
+}
+
+
+
+}
+li{
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    padding: 15px;
+    height: 15px;
+    width: auto;
+    margin-right: 25px;
+    margin-top: 1%;
+    /*background-color: rgb(187, 144, 64) ;*/
+    align-items: center;
+}
+a{
+    display: inline-flex;
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    font-size: 20px;
+    /*background-color: rgb(187, 144, 64);*/
+    padding: 10px;
+}
+
+
+#enviar{
+    background-color: #F8680C;
+    font-weight: 900;
+    margin-top: 15px;
+    border: solid;
+    border-radius: 15px;
+    border-color: rgb(108, 164, 234);
+    margin-left: 20px;
+}
+
+input, textarea{
+    border: solid;
+    border-color: rgb(108, 164, 234);
+    border-radius: 10px;
+}
+
+a:hover{
+    background-color: #030303;
+}
+a:visited{
+    color: white;
+}
+
+@media screen and (max-width:991px){
+    body{
+        width: 100%;
+    }
+    p{
+        width: 100%;
+        font-size: larger;
+    }
+
+    a{
+        display: flex;
+        background-color: none;
+        padding: 3px;
+    }
+
+    #nav{
+        display: inline-block;
+    }
+
+    #imi{
+        width: 100%;
+    }
+    #foto_imi{
+        width: 100%;
+    }
+    #mapa{
+        max-width: 400px;
+    }
+    .horarios{
+        width: 150%;
+    }
+    #cartel_horarios{
+        width: 100%;
+    }
+    #horarios{
+        width: 100%;
+    }
+    #locacion{
+        width: 100%;
+    }
+    #redes_div{ 
+        background-color: none; 
+        display: flex;
+    }
+
+    #formulario{
+        width: 80%;
+    }
+    .redes{
+        width: 100%;
+        background-color: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-container{
+        display: inline;
+    }
+    .videos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }    
+    .chat_azul{
+        margin-top: 50%;
+    }
+    .foto_seminario{
+        width: 100%;
+    }
+    #curso_tiro{
+        width: 100%;
+    }
+
+    #nav{
+        background-color: rgba(249, 125, 8, 0.2);
+    }
+    #seccion_venta{
+        display:flex;
+        flex-direction: column;
+    }
+    .chatea{
+        margin-bottom: 15px;
+    }
+    .nota_espectador{
+        margin-bottom: 20px;
+    }
+    .nota_tot{
+        margin-bottom: 20px;
+    }
+}
+
+.navegador{
+    margin-top: 35%;
+    width: 100%;
+}
+p#promo{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+p#letras_chicas{
+    display: flex-block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    background-color: rgb(12, 12, 12);
+}
+
+p#inscripciones{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#seminario{
+    text-align: center;
+    font-size: 65px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 100px;
+}
+
+form{
+    width: 540px;
+    height: 400px;
+    padding: 30px;
+    margin: auto;
+    background-color: rgba(5, 7, 12, 0.65);
+    background-size: cover;
+    margin-top: 70px;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#contacto_form{
+    background-image: linear-gradient(rgba(5, 7, 12, 0.45),rgba(5, 7, 12, 0.45)),url(imagenes_logo/yolando.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    height: 700px;
+    margin: auto;
+}
+
+.email_in{
+    margin-left: 5px;
+}
+input{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.h2_formulario{
+    margin-top: 15px;
+}
+
+.encabezado_imagen {
+    background-image: url(imagenes_logo/portada.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    
+}
+.mujeres{
+    width: 250px;
+    float: left;
+    margin-right: 10px;
+}
+.nota_espectador{
+    margin-right: 11px;
+}
+.nota_tot{
+    margin-right: 11px;
+}
+.chat_azul{
+    width: 60px;
+    position: fixed;
+    justify-content: flex-end;
+    padding-bottom: 150px;
+    /*margin-left: 40%;*/
+    padding-bottom: 30px;
+}
+
+.cuadro_texto{
+    width: 535px;
+    height: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.lema{
+    font-size: 24px;
+}
+.encabezado_imagen .navegador{
+    cursor: pointer;
+    color: azure;
+    
+}
+
+div.videos{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.info_eyal{
+    color: whitesmoke;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 35%;
+    background-color: rgb(187, 144, 64);
+}
+
+.info_eyal:hover{
+    color: orange;
+}
+
+
+
+h1 {color: #F8680C;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #333; /* Color de fondo para el título */
+    padding: 10px; /* Añade espacio interno alrededor del texto del título */
+    text-align: center;
+    font-size: 36px;
+}
+
+h2 {color: #F8680C;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 36px;
+    background-color: black;
+}
+
+h2.que_es{
+    margin-top: 150px;
+}
+
+h3 {color: silver;
+    text-align: center;}
+
+.foto_imi {
+    display: flex;
+
+    margin-bottom: 50px;
+
+}
+.tabla{
+    border-color: #F8680C;
+    padding: 5px;
+    margin-bottom: 70px;
+}
+
+.clase_eyal{
+    width: 250px;
+    float: right;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.contacto_p{
+    text-align: center;
+}
+
+#cartel_horarios{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.foto_diploma {
+    text-align: center;
+    width: 225px;
+    float: left;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.foto_eyal {
+    width: 150px;
+    float: right;
+    align-items: center;
+    margin-left: 15px;
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.chatea{
+    color: whitesmoke;
+    background-color: rgba(7, 5, 12,0.45);
+    border-radius: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+.chatea:hover{
+    color: #F8680C;
+}
+.nuestras{
+    margin-top: 70px;
+}
+
+.siguenos{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contact-container{
+    text-align: center;
+
+}
+
+#foto_volante{
+    width: 60%;
+}
+
+#linea_divisoria{
+    width: 80%;
+    color: #F8680C;
+    margin-top: 70px;
+}
+
+p {
+    text-align: justify;
+    font-family: "PT Sans", sans-serif;;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    margin-left: 10%;
+    /*margin-right: 200px;*/
+    margin-bottom: 50px;
+    font-size: 16px;
+    color: white;
+    width: 80%;
+}
+
+#direccion{
+    text-align: center;
+}
+.chat{
+    width: 50px;
+}
+#redes_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+/* aca lo que hice fue sacarle e widht de 100%*/
+.mapa_1 {
+    margin-top:70px;
+    margin-bottom:50px;
+    justify-content: center;
+}
+.img_correo{
+    width: 50px;
+    margin-right: 200px;
+}
+
+.email{
+    color: whitesmoke;
+}
+link:hover{
+    color: aquamarine;
+}
+
+.siguenos{
+    font-size: 20px;
+    font-style: oblique;
+}
+
+.fotos_redes{
+    width: 100px;
+}
+
+#curso_tiro{
+    width: 50%;
+}
+#tiro{
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+}
+
+footer {
+    background-color: #553;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 40px;
+}
+
+#horarios{
+    width: 60%;
+    text-align: center;
+}
+
+/* PAGINA TIENDA*/
+
+.indumentaria_imagen{
+    width: 250px;
+    margin-top: 40px;
+}
+
+
+
+.indumentaria_desc{
+    text-align: center;
+    margin: auto;
+}
+.btn_compra{
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(rgb(230, 202, 89), rgb(74, 57, 26));
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+}
+button:hover{
+    color: #f8960c;
+}
+.foto_seminario{
+    width: 60%;
+}
+#seccion_venta{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+#header_tienda{
+    background-image: url(imagenes_logo/portada.png);
+    background-position: center;
+    height: 400px;
+}
+
+#seccion_gracias{
+    width: 500px;
+    margin: auto;
+    border: solid;
+    border-color: #F8680C;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+#redes{
+    margin: auto;
+}
+#insta{
+    text-align: center;
+    margin-top: 50px;
+}
+#tienda{
+    margin: 0%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#lista_requisitos{
+    display: flex;
+    flex-direction: column;
+    list-style: square;
+    background-color: #06060695;
+    width: 600px;
+    margin: auto;
+    padding: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.lista_req{
+    background-color: #8d701f;
+}
+
+#titulo_curso{
+    margin: auto;
+    width: 700px;
+    background-color: #030303b2;
+    margin-bottom: 15px;
+    font-size: 21px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#parrafo_curso{
+    width: 800px;
+    margin: auto;
+    background-color: #030303b9;
+    padding: 50px;
+}
+
+#requisitos{
+    text-align: center;
+    margin: auto;
+}
+
+#curso_form{
+    background-image: linear-gradient(rgba(5, 7, 12, 0.45),rgba(5, 7, 12, 0.45)),url(imagenes_logo/fondo_ladrillo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    height: 800px;
+    margin: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}

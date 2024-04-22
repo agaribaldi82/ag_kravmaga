@@ -1,0 +1,58 @@
+body{
+    background-image: url(encabezado1.webp);
+}
+form{
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+.submit{
+    background-color: orange;
+    border-radius: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 30px;
+    padding: 10px;
+    font-family: "Arial Black";
+}
+
+.etiqueta{
+    width: 200px;
+}
+
+.email{
+    margin-bottom: 40px;
+}
+
+.contraseña{
+    margin-bottom: 10px;
+}
+.remember{
+    margin-bottom: 50px;
+}
+
+#logo{
+    width: 300px;
+    display: flex;
+    opacity: 0.6;
+}
+.logo_kmg{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+/*ESTILOS PARA admin.html*/
+
+#bienvenido{
+    color: orange;
+}
+#formu {
+    display: flex;
+    background-color: #070000;
+    width: 300px;
+    height: 250px;
+    justify-content: center;
+    justify-content: center;
+    margin: auto;
+    opacity: 0.9;
+}

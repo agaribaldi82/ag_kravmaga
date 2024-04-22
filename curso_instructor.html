@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Instructor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Bienvenido al Curso de Instructor!</h1>
+    </div>
+    <div id="requisitos">
+        <h3 id="titulo_curso">Si contas con al menos uno de estos requisitos ya estas habilitado para inscribirte:</h3>
+        <ul id="lista_requisitos">
+            <li class="lista_req">Tener dos niveles alcanzados en el sistema.</li>
+            <li class="lista_req">Ser cinturón negro de algún arte marcial</li>
+            <li class="lista_req">Ser competidor de deportes de contacto o artes marciales.</li>
+            <li class="lista_req">Contar con dos años de entrenamiento en cualquier deporte de contacto.</li>
+        </ul>
+    </div>
+    <div id="parrafo_curso">
+        <p>
+            <b>Hola, y  bienvenido!</b> <br> <br>
+
+            Mi nombre es Adrian Garibaldi, <br> Te cuento un poco sobre mí...en el año 2008 luego de recibir un impacto de bala por 
+            dos delincuentes comencé a entrenar Krav Maga mientras trabajaba en la Armada Nacional. <br><br>
+
+            En el año 2013 me uní a la organización KMG alcanzando el nivel “Graduado 1”, ocupando el puesto de "Director Regional." <br>
+            En el año 2016 comencé a dar instrucción de Defensa Personal en el Batallón de Infantería Paracaidista Nro 14 Fuerzas Especiales (Compañía Comandos y Escorpión Contraterrorista) donde cesé actividad debido a la pandemia. <br><br>
+
+            Di capacitaciones en Argentina en conjunto con Eyal Yanilov a la Policía Federal de BsAs y Policía de Merlo, también di instrucción en la Escuela Militar en Toledo, Canelones y Policía de Investigaciones Zona 3 (Montevideo) en Uruguay. <br><br>
+
+            En el año 2019 fui seleccionado para formar al Ejército Nacional de todo el territorio uruguayo, pero debido a cambios de mando no se llevó a cabo. <br><br>
+
+            Desde el inicio me mantuve capacitándome constantemente, entrenando con los más altos exponentes del Krav Maga principalmente Eyal Yanilov ( mi instructor y referente) quien en Junio de 2019 me evaluó en mi examen donde pasé satisfactoriamente al grado Experto 1 en Altos de Golan, Israel. <br><br>
+
+            Durante todos estos años desarrollé una gran pasión por el krav maga y he recibido gran cantidad de información directamente de la fuente, y hoy quiero compartirlo contigo y unirte a mi equipo de instructores para crecer en el territorio uruguayo. <br><br>
+
+            Busco aspirantes que se sacrifiquen y realmente se ganen su diploma de Instructor y a la hora de salir a trabajar con un grupo de alumnos den la imagen y la profesionalidad indicada, dominando las técnicas a enseñar y comprendiendolas para poder transmitirlas correctamente. <br><br>
+            Fue la manera que me entrenaron y me parece que es la única aceptable. No caer en vender los diplomas, grados o cinturones. <br><br>
+
+            <b>Espero verte en el curso, te deseo lo mejor. Y nuevamente bienvenido!</b>
+
+        </p>
+    </div>
+    <section id="curso_form">
+        <div>
+            <form id="formulario_curso" action="formulario.php" method="POST">
+                <h2 id="h2_curso_form">Inscribite aquí:</h2>
+                <div class="formulario_curso">
+                    <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required><br>
+                    <input type="text" name="name" id="name" placeholder="Edad" required><br>
+                    <input type="text" name="name" id="name" placeholder="Fecha de Nacimiento" required><br>
+                    <input type="text" name="name" id="name" placeholder="Cédula de Identidad" required><br>
+                    <input type="email" name="email" id="email" placeholder="Correo Electrónico" required><br>
+                    <input type="tel" name="tel" id="phone" placeholder="Teléfono (Opcional)"><br>
+                    <textarea name="consulta" id="message" cols="22" rows="10" placeholder="Contanos brevemente con cual o cuales de los requisitos cumplís"></textarea> <br>
+                    <button id="enviar" type="submit">Enviar</button>
+                    <a href="index.html"></a>
+                    <input type="hidden" name="_next" value="www.kravmagauy.com">
+                    <input type="hidden" name="_captcha" value="True">
+                </div>
+            </form>
+</body>
+</html>
