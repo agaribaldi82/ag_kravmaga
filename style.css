@@ -64,6 +64,11 @@ input, textarea{
     border-radius: 10px;
 }
 
+textarea{
+    width: 80%;
+    font-size: 15px;
+}
+
 a:hover{
     background-color: #030303;
 }
@@ -204,8 +209,10 @@ form{
     margin-top: 70px;
     text-align: center;
     border-radius: 15px;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
 #contacto_form{
@@ -214,8 +221,11 @@ form{
     background-size: cover;
     background-position: center;
     width: 70%;
-    height: 700px;
+    height: 750px;
     margin: auto;
+    padding-top: 30px;
+    margin-top: 50px;
+    border-radius: 15px;
 }
 
 .email_in{
@@ -224,6 +234,7 @@ form{
 input{
     padding: 5px;
     margin-bottom: 10px;
+    width: 80%;
 }
 .h2_formulario{
     margin-top: 15px;
