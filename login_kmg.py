@@ -6,7 +6,7 @@ app = Flask(__name__,template_folder='template')
 app.config['MYSQL_HOST']='10.0.10.54'
 app.config['MYSQL_USER']='morwicjv_agaribaldi'
 app.config['MYSQL_PORT']=3306
-app.config['MYSQL_PASSWORD']='bruno290610'
+app.config['MYSQL_PASSWORD']=''
 app.config['MYSQL_DB']='morwicjv_alumnos-kmg.login'
 app.config['MYSQL_CURSORCLASS']='DictCursor'
 app.config['MYSQL_CONNECT_TIMEOUT']=60
