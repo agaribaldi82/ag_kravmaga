@@ -317,9 +317,22 @@ h1 {color: #F8680C;
 h2 {color: #F8680C;
     text-align: center;
     margin-top: 70px;
-    font-size: 36px;
+    font-size: 56px;
     background-color: black;
+    animation: entrarDesdeDerecha 1s ease-out forwards;
+    opacity: 0;
 }
+
+@keyframes entrarDesdeDerecha {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
 h2.que_es{
     margin-top: 150px;
@@ -412,13 +425,13 @@ button {
 p {
     text-align: justify;
     font-family: "PT Sans", sans-serif;;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     line-height: 24px;
     margin-left: 10%;
     /*margin-right: 200px;*/
     margin-bottom: 50px;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
     width: 80%;
 }
@@ -599,4 +612,12 @@ button:hover{
     margin: auto;
     padding-top: 70px;
     padding-bottom: 70px;
+}
+
+iframe:hover{
+    transform: scale(1.2);
+}
+iframe{
+    background-color: #F8680C;
+    padding: 20px;
 }

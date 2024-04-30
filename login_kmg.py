@@ -3,11 +3,11 @@ from flask import render_template, redirect, request, Response, session
 from flask_mysqldb import MySQL, MySQLdb
 
 app = Flask(__name__,template_folder='template')
-app.config['MYSQL_HOST']='10.0.10.54'
-app.config['MYSQL_USER']='morwicjv_agaribaldi'
+app.config['MYSQL_HOST']='127.0.0.1'
+app.config['MYSQL_USER']='u540045792_agaribaldi'
 app.config['MYSQL_PORT']=3306
 app.config['MYSQL_PASSWORD']=''
-app.config['MYSQL_DB']='morwicjv_alumnos-kmg.login'
+app.config['MYSQL_DB']='u540045792_socios.login'
 app.config['MYSQL_CURSORCLASS']='DictCursor'
 app.config['MYSQL_CONNECT_TIMEOUT']=60
 
@@ -26,11 +26,11 @@ def admin():
 @app.route('/acceso_login', methods= ["GET", "POST"])
 def login():
     
-    if request.method == 'POST' and 'txtCorreo' in request.form and 'txtPassword':
-        _correo = request.form['txtCorreo']
-        _password = request.form['txtPassword']
+    if request.method == 'POST' and 'usuario' in request.form and 'password':
+        usuario = request.form['usuario']
+        password = request.form['password']
         cur = mysql.connection.cursor()
-        cur.execute('SELECT * FROM login WHERE email = %s and contrasena =%s', (_correo, _password,))
+        cur.execute('SELECT * FROM login WHERE email = %s and password =%s', (usuario, password,))
         account = cur.fetchone()
         
         if account:
