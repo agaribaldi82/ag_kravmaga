@@ -1,4 +1,7 @@
-
+#principal{
+    width: 100%;
+    margin: 0;
+}
 header {
     /*background-color: #333;*/
     background-size: cover;
@@ -18,6 +21,8 @@ body {
     background-image: linear-gradient(to right, black, rgb(40, 39, 37));
     color: white;
     text-align: center;
+    margin: 0;
+    width: 100%;
 
 #nav{
     background-color: #F8680C;
@@ -71,102 +76,13 @@ textarea{
 
 a:hover{
     background-color: #030303;
+    border-radius: .2rem;
 }
 a:visited{
     color: white;
 }
 
-@media screen and (max-width:991px){
-    body{
-        width: 100%;
-    }
-    p{
-        width: 100%;
-        font-size: larger;
-    }
 
-    a{
-        display: flex;
-        background-color: none;
-        padding: 3px;
-    }
-
-    #nav{
-        display: inline-block;
-    }
-
-    #imi{
-        width: 100%;
-    }
-    #foto_imi{
-        width: 100%;
-    }
-    #mapa{
-        max-width: 400px;
-    }
-    .horarios{
-        width: 150%;
-    }
-    #cartel_horarios{
-        width: 100%;
-    }
-    #horarios{
-        width: 100%;
-    }
-    #locacion{
-        width: 100%;
-    }
-    #redes_div{ 
-        background-color: none; 
-        display: flex;
-    }
-
-    #formulario{
-        width: 80%;
-    }
-    .redes{
-        width: 100%;
-        background-color: none;
-        display: flex;
-        justify-content: center;
-    }
-
-    .contact-container{
-        display: inline;
-    }
-    .videos{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }    
-    .chat_azul{
-        margin-top: 50%;
-    }
-    .foto_seminario{
-        width: 100%;
-    }
-    #curso_tiro{
-        width: 100%;
-    }
-
-    #nav{
-        background-color: rgba(249, 125, 8, 0.2);
-    }
-    #seccion_venta{
-        display:flex;
-        flex-direction: column;
-    }
-    .chatea{
-        margin-bottom: 15px;
-    }
-    .nota_espectador{
-        margin-bottom: 20px;
-    }
-    .nota_tot{
-        margin-bottom: 20px;
-    }
-}
 
 .navegador{
     margin-top: 35%;
@@ -245,7 +161,7 @@ input{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 31.25rem;
     
 }
 .mujeres{
@@ -620,4 +536,113 @@ iframe:hover{
 iframe{
     background-color: #F8680C;
     padding: 20px;
+}
+#menu_hamburguesa{
+    display: none;
+}
+
+@media screen and (max-width:991px){
+    #menu_hamburguesa{
+        display: flex;
+        top: 0;
+    }
+    #lista_menu.active {
+        display: flex;
+        flex-direction: column;
+        }
+    .list_menu{
+        display: none;
+    }
+    body{
+        width: 100%;
+    }
+    p{
+        width: 100%;
+        font-size: larger;
+    }
+
+    a{
+        display: flex;
+        background-color: none;
+        padding: 3px;
+    }
+
+    #nav{
+        display: inline-block;
+    }
+
+    #imi{
+        width: 100%;
+    }
+    #foto_imi{
+        width: 100%;
+    }
+    #mapa{
+        max-width: 400px;
+    }
+    .horarios{
+        width: 150%;
+    }
+    #cartel_horarios{
+        width: 100%;
+    }
+    #horarios{
+        width: 100%;
+    }
+    #locacion{
+        width: 100%;
+    }
+    #redes_div{ 
+        background-color: none; 
+        display: flex;
+    }
+
+    #formulario{
+        width: 80%;
+    }
+    .redes{
+        width: 100%;
+        background-color: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-container{
+        display: inline;
+    }
+    .videos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }    
+    .chat_azul{
+        margin-top: 50%;
+    }
+    .foto_seminario{
+        width: 100%;
+    }
+    #curso_tiro{
+        width: 100%;
+    }
+
+    #nav{
+        background-color: rgba(249, 125, 8, 0.2);
+    }
+    #seccion_venta{
+        display:flex;
+        flex-direction: column;
+    }
+    .chatea{
+        margin-bottom: 15px;
+    }
+    .nota_espectador{
+        margin-bottom: 20px;
+    }
+    .nota_tot{
+        margin-bottom: 20px;
+    }
+    .encabezado_imagen{
+        width: 100%;
+    }
 }

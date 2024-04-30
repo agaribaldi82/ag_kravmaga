@@ -22,19 +22,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tauri&display=swap" rel="stylesheet">
-</head>
-
-
-        
+    <script src="main.js" defer></script>
+</head>    
     <body>
         <header class="encabezado_imagen">
-            
             <div class="navegador">
                 <div class="chat_azul">
                     <a href="https://wa.me/+59899002018" target="_blank"><img class="chat_azul" src="imagenes_logo/chat_azul.png" alt=""></a>
                 </div>
                 <nav id="nav">
-                    <ul>
+                    <ul id="lista_menu" class="list_menu">
                         <li><a href="#home">Inicio</a></li>
                         <li><a href="#que_es">Krav Maga</a></li>
                         <li><a href="#about">Nosotros</a></li>
@@ -45,10 +42,13 @@
                         <!--<li><a href="template/index.html" target="_blank">Login</a></li>-->
                         <li><a href="#contact">Contacto</a></li>
                     </ul>
+                    <div>
+                        <button  id="menu_hamburguesa">&equiv;</button>
+                    </div>
                 </nav>
             </div>
         </header>
-        <main>
+        <main id="principal">
         <section id="home">
             <h1 class="bienvenido">Bienvenido!</h2>
             <h3 class="lema">"So one may walk in peace..."</h3>
