@@ -6,10 +6,3 @@ if (enviar) {
         window.location.href="index.html"  
     });
 }
-
-
-
-if(window.confirm("Estás interesado/a en formarte como Instructor/a?"))
-    {window.location.href="curso_instructor.html"}
-
-else{}

@@ -22,33 +22,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tauri&display=swap" rel="stylesheet">
-</head>
-
-
-        
+    <script src="main.js" defer></script>
+</head>    
     <body>
         <header class="encabezado_imagen">
-            
-            <div class="navegador">
+            <nav id="nav">
                 <div class="chat_azul">
-                    <a href="https://wa.me/+59899002018" target="_blank"><img class="chat_azul" src="imagenes_logo/chat_azul.png" alt=""></a>
+                    <a id="guasap" href="https://wa.me/+59899002018" target="_blank"><img id="chat_azul" src="imagenes_logo/whatsapp1.png" alt=""></a>
                 </div>
-                <nav id="nav">
-                    <ul>
-                        <li><a href="#home">Inicio</a></li>
-                        <li><a href="#que_es">Krav Maga</a></li>
-                        <li><a href="#about">Nosotros</a></li>
-                        <li><a href="#classes">Horarios y Clases</a></li>
-                        <li><a href="galeria.html" target="_blank">Galeria</a></li>
-                        <li><a href="tienda.html" target="_blank">Tienda</a></li>
-                        <li><a href="curso_instructor.html" target="_blank">Cursos</a></li>
+                
+                <ul id="lista_menu" class="list_menu">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#que_es">Krav Maga</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#classes">Horarios y Clases</a></li>
+                    <li><a href="galeria.html" target="_blank">Galeria</a></li>
+                    <li><a href="tienda.html" target="_blank">Tienda</a></li>
+                    <li><a href="curso_instructor.html" target="_blank">Cursos</a></li>
                         <!--<li><a href="template/index.html" target="_blank">Login</a></li>-->
-                        <li><a href="#contact">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <div>
+                    <button  id="menu_hamburguesa">&equiv;</button>
+                </div>
+            </nav>
         </header>
-        <main>
         <section id="home">
             <h1 class="bienvenido">Bienvenido!</h2>
             <h3 class="lema">"So one may walk in peace..."</h3>
@@ -85,14 +83,12 @@
 
                 Es importante destacar que Krav Maga no es un deporte de combate o arte marcial tradicional. No hay competiciones ni reglas formales. El objetivo es la supervivencia y la protección personal en situaciones de amenaza. Muchas personas encuentran en Krav Maga un método efectivo para adquirir habilidades prácticas de autodefensa.
             </p>
-    
         </section>
         <div class="videos">
             <iframe class="nota_espectador" src="https://www.youtube.com/embed/JoPQcH88_sI?si=VwKpkKv5lZYWORnc" title="Nota: Radio El Espectaodr" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <iframe class="nota_tot" src="https://www.youtube.com/embed/US6iihDyHMc?si=0RNlXTXqTEBouW2m" title="Nota Tarde o Temprano - Canal 12" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <iframe class="federal" src="https://www.youtube.com/embed/OevSr0B39s0?si=kLucZnDkXMtmRUfc" title="Eyal Yanilov y Adrian Garibaldi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        
             <section id="about">
             <h2>Acerca de nosotros</h2>
         
@@ -185,11 +181,11 @@
             </h2 >
 
             <div id="mapa">
-                <iframe id="locacion" " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.752557743621!2d-56.11897932485438!3d-34.887559372542825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f811d83b9a017%3A0xb342640ca1f768c5!2sKrav%20Maga%20Global%20-%20Uruguay!5e0!3m2!1ses!2suy!4v1697523640035!5m2!1ses!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="mapa_1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.749351481681!2d-56.115511360748876!3d-34.88763987265957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f86d33dbbb48f%3A0x62a9fa28da6dda08!2sAv.%20Italia%204460%2C%2011400%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1714512610630!5m2!1ses!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <p id="direccion">
-                Av. Italia 4334 1er Piso -
-                Entre Santana y Caldas -
+                Av. Italia 4460
+                Esquina Atlántico -
                 Malvín
             </p>
             
@@ -203,7 +199,6 @@
                 <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@agkravmaga" data-unique-id="agkravmaga" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@agkravmaga?refer=creator_embed">@agkravmaga</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
             </div>
         </section>
-        </main>
         <section id="footer">
             <footer>
                 <span>
