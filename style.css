@@ -168,10 +168,16 @@ input{
 .chat_azul{
     width: 5vw;
     position: fixed;
-    justify-content: flex-end;
     right: 3rem;
-    top: 3rem;
+    bottom: 1rem;
     background-color: none;
+    z-index: 2;
+}
+#guasap{
+    position: sticky;
+    right: 3rem;
+    bottom: 1rem;
+    
 }
 
 #chat_azul{
@@ -536,9 +542,20 @@ iframe{
     footer{
         width: 95vw;
     }
+
     #menu_hamburguesa{
         display: flex;
-        top: 0;
+        margin-top: 2rem;
+        margin-left: 45%;
+        background-color: #f8660c80;
+        color: white;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: .5rem;
+        font-size: 2rem;
     }
     #lista_menu.active {
         display: flex;
@@ -571,6 +588,10 @@ iframe{
     a#guasap{
         background-color: rgba(0, 0, 0, 0);
         background-size: cover;
+        position: fixed;
+        bottom: 7rem;
+        right: 0;
+        z-index: 2;
     }
     #nav{
         display: inline-block;
