@@ -123,7 +123,7 @@ form{
     background-size: cover;
     margin-top: 5rem;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 1rem;
     padding-bottom: 7rem;
     justify-content: center;
     align-items: center;
@@ -134,16 +134,17 @@ form{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 70%;
+    width: 100%;
     height: 60vw;
     margin: auto;
     align-content: center;
-    border-radius: 15px;
+    border-radius: 1rem;
     margin-top: 5rem;
     display:flex ;
     flex-direction: column;
   
 }
+
 
 .email_in{
     margin-left: 5px;
@@ -325,6 +326,7 @@ button {
 .siguenos{
     text-align: center;
     margin-top: 100px;
+    width: 100%;
 }
 
 .contact-container{
@@ -364,6 +366,7 @@ p {
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    width: 100%;
 }
 
 .mapa_1 {
@@ -556,10 +559,8 @@ footer{
         background-color: rgba(10, 4, 0, 0.195);
     }
     footer{
-        width: 95vw;
-    }
-    #titulo_direccion{
-        margin-top: 40rem;
+        width: 100vw;
+        margin-top: 75rem;
     }
     #menu_hamburguesa{
         display: flex;
@@ -613,7 +614,7 @@ footer{
     #nav{
         display: inline-block;
     }
-
+    
     #imi{
         width: 100%;
     }
@@ -674,6 +675,8 @@ footer{
     }
     .chatea{
         margin-bottom: 15px;
+        margin: auto;
+        margin-bottom: 1rem;
     }
     .nota_espectador{
         margin-bottom: 20px;
@@ -685,5 +688,15 @@ footer{
         width: 100vw;
         background-image: url(imagenes_logo/logo_ag_negro.png);
     }
-
+    #formulario{
+        width: 80%;
+        height: 80rem;
+    }
+    #contacto_form{
+        width: 100%;
+        height: 50rem;
+    }
+    #formulario a{
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
