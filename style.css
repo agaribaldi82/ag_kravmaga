@@ -1,3 +1,5 @@
+
+
 header {
     background-size: cover;
     font-family: sans-serif; /* Tipo de fuente */
@@ -96,7 +98,6 @@ a, #log{
     border: solid;
     border-radius: 15px;
     border-color: rgb(252, 252, 252);
-    margin-left: 20px;
     box-shadow: .1rem .1rem .5rem orange;
 }
 
@@ -113,8 +114,7 @@ textarea{
 
 
 nav a:hover{
-    background-color: #e90b0b49;
-    padding: 2rem;
+    text-shadow: .2rem .2rem .5rem white;
 }
 nav a:visited{
     color: white;
@@ -158,8 +158,12 @@ form{
 }
 
 .h2_formulario{
+    width: 49vw;
     background-color: #03030370;
     border-radius: .5rem;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
 }
 
 
@@ -173,7 +177,7 @@ form h2{
     background-size: cover;
     background-position: center;
     width: 70vw;
-    height: 50vw;
+    height: 45vw;
     margin: auto;
     align-content: center;
     border-radius: 1rem;
@@ -237,16 +241,11 @@ input{
     z-index: 2;
     opacity: .7;
 }
-#guasap{
-    position: sticky;
-    right: 3rem;
-    bottom: 1rem;
-    
+#correo_oculto{
+    opacity: 0;
 }
-
 #chat_azul{
-    width: 5vw;
-
+    width: 4rem;
 }
 
 #chat_azul:hover{
@@ -473,6 +472,7 @@ link:hover{
 }
 
 #footer{
+    font-size: 50%;
     background-color: #553;
     color: white;
     text-align: center;
@@ -596,9 +596,6 @@ button:hover{
 }
 
 
-#lista_menu a:hover{
-    padding: .5rem;
-}
 #curso_form{
     background-image: linear-gradient(rgba(5, 7, 12, 0.45),rgba(5, 7, 12, 0.45)),url(imagenes_logo/fondo_ladrillo.jpeg);
     background-repeat: no-repeat;
@@ -607,7 +604,7 @@ button:hover{
     width: 70%;
     height: 45rem;
     margin: auto;
-    padding-top: 70px;
+    padding-top: 0;
     padding-bottom: 70px;
     margin-bottom: 2rem;
 }
@@ -660,10 +657,16 @@ iframe:hover{
     display: none;
 }
 
+#message{
+    margin-bottom: 2rem;
+}
+#formulario_curso{
+    padding-top: 1rem;
+}
 
 @media screen and (max-width:991px){
     #enviar{
-        margin-top: 1rem;
+        margin-top: .5rem;
         margin-left: 0;
     }
     #h2_curso_form{
@@ -680,6 +683,16 @@ iframe:hover{
     }
     #formulario_curso input{
         width: 80vw;
+    }
+    #formulario input{
+        width: 100%;
+    }
+    .h2_formulario{
+        width: 100%;
+        font-size: 2rem;
+    }
+    .form_inicio{
+        height: 50%;
     }
     #correo{
         margin-bottom: 1rem;
@@ -818,6 +831,13 @@ iframe:hover{
         right: 1rem;
         bottom: 1rem;
         opacity: 1;
+        z-index: 2;
+    }
+    a#chat_azul{
+        background-color: balck;
+    }
+    #guasap{
+        background-color: rgba(0, 0, 0, 0);
     }
 
     .foto_seminario{
@@ -852,7 +872,7 @@ iframe:hover{
     }
     #contacto_form{
         width: 100%;
-        height: 50rem;
+        height: 37rem;
     }
     #formulario a{
         background-color: rgba(0, 0, 0, 0);

@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+
+
+}
+body{
+    background-image: url(imagenes_logo/encabezado1.webp);
+}
+.linea{
+    background-color: orange;
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    padding: 100px 0;
+}
+.container img{
+    transition: transform 0.5s;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box:nth-child(1){
+    grid-column: span 2;
+}
+.box:nth-child(4){
+    grid-column: span 2;
+}
+
+.box:nth-child(1){
+    grid-column-start: span 1;
+}
+
+.box:nth-child(4){
+    grid-column-start: span 1;
+}
+@media(max-widht: 991px){
+    .container{
+        padding: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .box:nth-child(1){
+        grid-column-start: span 1;
+    }
+    .box:nth-child(4){
+        grid-column-start: span 1;
+    }
+    #nav{
+        display: inline-block;
+        justify-content: space-between;
+    }
+}
+
+.box:hover{
+    filter: blur(2px);
+    transform: rotate(5deg) scale(1);
+
+}
+.inicio{
+    text-decoration:none;
+    color: whitesmoke;
+    font-size: 24px;
+    display: flex;
+}
+
+a:hover{
+    color: white;
+}
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+.light-box img{
+    width: 75vw;
+    max-height: 70vw;
+}
+.light-box:target{
+    transform: scale(1);
+}
+.close{
+    position: absolute;
+    display: block;
+    top: 40px;
+    right: 40px;
+    background: #851919;
+    color: whitesmoke;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.next{
+    display: block;
+    background: #851919;
+    color: black;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+.siguiente{
+    font-size: 24px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+.atras{
+    font-size: 24px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.nav{
+    background-color: yellow;
+    display: flex;
+    justify-content: flex-end;
+}
+header{
+    background-color: #20382f;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 35px;
+}

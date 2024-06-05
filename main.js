@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const menu_btn = document.getElementById("menu_hamburguesa");
     const menu_list = document.getElementById("lista_menu");
 
@@ -9,7 +9,7 @@
     function toggle(element, className = "active") {
         element.classList.toggle(className);
     }
-});*/
+});
 
 function abrir(){
     document.getElementById("lista_menu").style.display="block"
