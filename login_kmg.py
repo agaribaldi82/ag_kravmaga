@@ -1,22 +1,21 @@
 from flask import Flask
 from flask import render_template, redirect, request, Response, session
 from flask_mysqldb import MySQL, MySQLdb
-
-app = Flask(__name__,template_folder='template')
-app.config['MYSQL_HOST']='127.0.0.1'
-app.config['MYSQL_USER']='u540045792_agaribaldi'
-app.config['MYSQL_PORT']=3306
-app.config['MYSQL_PASSWORD']=''
-app.config['MYSQL_DB']='u540045792_socios.login'
-app.config['MYSQL_CURSORCLASS']='DictCursor'
-app.config['MYSQL_CONNECT_TIMEOUT']=60
+import pymysql
 
 
-mysql = MySQL(app)
+app= Flask(__name__)
+
+conexion = pymysql.connect(host='193.203.175.68', 
+                           port= 3306,
+                           user = 'u540045792_agaribaldi', 
+                           password= 'Bruno2906-',
+                           db = 'u540045792_socios')
+
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('login.html')
 
 @app.route('/admin')
 def admin():
@@ -29,19 +28,19 @@ def login():
     if request.method == 'POST' and 'usuario' in request.form and 'password':
         usuario = request.form['usuario']
         password = request.form['password']
-        cur = mysql.connection.cursor()
-        cur.execute('SELECT * FROM login WHERE email = %s and password =%s', (usuario, password,))
+        cur = conexion.cursor(pymysql.cursors.DictCursor)
+        cur.execute('SELECT * FROM login WHERE usuario = %s and password =%s', (usuario, password,))
         account = cur.fetchone()
         
         if account:
             session['logueado'] = True
-            session['usuario_id'] = account['usuario_id']
+            session['id'] = account['id']
             return render_template('admin.html')
         
         else:
-            return render_template('index.html')
+            return render_template('login.html')
 
-    return render_template('index.html')
+    return render_template('login.html')
 
 
 if __name__ == '__main__':

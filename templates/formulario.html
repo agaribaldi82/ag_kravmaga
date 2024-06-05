@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/static/form.css">
+    <script src="/static/contacto.js" defer></script>
+</head>
+<body>
+    <h1 id="titulo"> Formulario de contacto:</h1>
+    <form method="post" action="/submit">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido">
+        
+        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+        <input type="date" name="fecha_nac">
+        
+        <label for="edad">Edad</label>
+        <input type="number" name="edad">
+        
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        
+        <label for="telefono">Teléfono</label>
+        <input type="number" name="telefono">
+        
+        <label for="sociedad">Sociedad Médica</label>
+        <input type="text" name="sociedad">
+        
+        <label for="emergencia">Emergencia médica</label>
+        <input type="text" name="emergencia" id="">
+        
+        <button id="contacto">Enviar</button>
+      </form>
+</body>
+</html>

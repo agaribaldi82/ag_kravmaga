@@ -7,6 +7,37 @@ header {
     text-align: center;
     margin-bottom: .3rem;
     margin-top: 0;
+    height: 100%;
+}
+.cerrarForm{
+    font-size: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    background-color: #25f10a8e;
+    width: 4rem;
+    border-radius: .2rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.cerrarForm:hover{
+    background-color: rgba(255, 0, 0, 0.562);
+}
+
+.submit{
+    border-radius: .5rem;
+    margin-top: 1rem;
+    background-color: #030303c4;
+    color: white;
+}
+
+ul p{
+    display: none;
+}
+
+#seccion_final{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0%;
 }
 
 body {
@@ -15,10 +46,15 @@ body {
     text-align: center;
     margin: auto;
     width: 100%;
+    height: auto;
 }
 #nav{
-    background-color: #F8680C;
+    top: 0;
+    background-image: linear-gradient(black, rgba(241, 112, 7, 0.849));
     width: 100%;
+    position: fixed;
+    z-index: 2;
+
 }
 
 li{
@@ -37,25 +73,31 @@ li{
     font-size: 1.3rem;
 }
 
-a{
+a, #log{
     color: rgb(255, 254, 254);
     text-decoration: none;
 }
 
 .bienvenido{
     font-size: 4rem;
+    text-shadow: .4rem .4rem .3rem rgb(0, 0, 0);
     background-color: #030303;
-    width: 100%;
+}
+
+#home h1{
+    margin-top: 0;
 }
 
 #enviar{
     background-color: #F8680C;
+    color: white;
     font-weight: 900;
     margin-top: 15px;
     border: solid;
     border-radius: 15px;
-    border-color: rgb(108, 164, 234);
+    border-color: rgb(252, 252, 252);
     margin-left: 20px;
+    box-shadow: .1rem .1rem .5rem orange;
 }
 
 input, textarea{
@@ -69,12 +111,12 @@ textarea{
     font-size: 15px;
 }
 
-a:hover{
-    background-color: #03030349;
-    border-radius: .2rem;
-    width: 5rem;
+
+nav a:hover{
+    background-color: #e90b0b49;
+    padding: 2rem;
 }
-a:visited{
+nav a:visited{
     color: white;
 }
 
@@ -103,36 +145,45 @@ p#inscripciones{
     font-size: 65px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top: 100px;
+    margin-bottom: 2rem;
 }
 
 form{
-    width: 540px;
-    height: 400px;
-    padding: 30px;
+    width: 60vw;
+    height: 20vh;
+    padding: 2rem;
     margin: auto;
-    background-color: rgba(5, 7, 12, 0.65);
-    background-size: cover;
-    margin-top: 70px;
-    text-align: center;
-    border-radius: 15px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    justify-content: center;
-    align-items: center;
+    margin-top: 0;
+
+}
+
+.h2_formulario{
+    background-color: #03030370;
+    border-radius: .5rem;
+}
+
+
+form h2{
+    background-image: none;
 }
 
 #contacto_form{
-    background-image: linear-gradient(rgba(5, 7, 12, 0.45),rgba(5, 7, 12, 0.45)),url(imagenes_logo/yolando.JPG);
+    background-image: linear-gradient(rgba(12, 122, 247, 0.45),rgba(5, 7, 12, 0.45));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 70%;
-    height: 750px;
+    width: 70vw;
+    height: 50vw;
     margin: auto;
-    padding-top: 30px;
-    margin-top: 50px;
-    border-radius: 15px;
+    align-content: center;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    display:flex ;
+    flex-direction: column;
+    position: relative;
+  
 }
+
 
 .email_in{
     margin-left: 5px;
@@ -142,9 +193,6 @@ input{
     margin-bottom: 10px;
     width: 80%;
 }
-.h2_formulario{
-    margin-top: 15px;
-}
 
 .encabezado_imagen {
     background-image: url(imagenes_logo/portada.png);
@@ -152,31 +200,57 @@ input{
     background-repeat: no-repeat;
     background-size: cover;
     height: 30rem;
-    
+    animation-name: galery_portada;
+    animation-fill-mode:backwards;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes galery_portada{
+    0%{background-image: url(imagenes_logo/clase1.jpg);}
+    20%{background-image: url(imagenes_logo/clase3.jpg);}
+    40%{background-image: url(imagenes_logo/clase6.jpg);}
+    60%{background-image: url(imagenes_logo/clase7.jpg);}
+    80%{background-image: url(imagenes_logo/portada.png);}
+    100%{background-image: url(imagenes_logo/clase9.jpg);}
+}
+
 .mujeres{
     width: 250px;
     float: left;
     margin-right: 10px;
 }
+/*
 .nota_espectador{
     margin-right: 11px;
 }
 .nota_tot{
     margin-right: 11px;
-}
+}*/
 .chat_azul{
     width: 5vw;
     position: fixed;
-    justify-content: flex-end;
     right: 3rem;
-    top: 3rem;
-    background-color: none;
+    bottom: 1rem;
+    z-index: 2;
+    opacity: .7;
+}
+#guasap{
+    position: sticky;
+    right: 3rem;
+    bottom: 1rem;
+    
 }
 
 #chat_azul{
     width: 5vw;
-    background-color: none;
+
+}
+
+#chat_azul:hover{
+    transform: rotate(15deg);
 }
 
 .cuadro_texto{
@@ -211,22 +285,23 @@ div.videos{
 
 
 
-h1 {color: #F8680C;
+h1 {color: #fdfbfa;
     margin-top: 6.25rem;
     margin-bottom: 6.25rem;
-    background-color: #333; 
+    background-image: radial-gradient(rgba(0, 0, 0, 0.493), rgba(255, 136, 0, 0.767)); 
     padding: 0.625rem; /* Añade espacio interno alrededor del texto del título */
     text-align: center;
     font-size: 2.25rem;
 }
 
-h2 {color: #F8680C;
+h2 {color: #fcfaf9;
     text-align: center;
     margin-top: 70px;
     font-size: 56px;
-    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.582), rgba(255, 115, 0, 0.966));
     animation: entrarDesdeDerecha 1s ease-out forwards;
     opacity: 0;
+    text-shadow: .4rem .4rem .2rem black;
 }
 
 @keyframes entrarDesdeDerecha {
@@ -270,6 +345,7 @@ h3 {color: silver;
 
 #cartel_horarios{
     text-align: center;
+    margin-top: 5rem;
     margin-bottom: 70px;
 }
 .foto_diploma {
@@ -292,16 +368,19 @@ button {
     padding: 10px 15px;
     cursor: pointer;
 }
-.chatea{
-    color: whitesmoke;
-    background-color: rgba(7, 5, 12,0.45);
-    border-radius: 10px;
-    margin-left: 20px;
-    text-align: center;
+
+a.chatea{
+    background-color: #d36f129f;
+    padding: 3rem;
+    margin: auto;
+    margin-left: 2rem;
+    box-shadow: .2rem .2rem .1rem rgba(253, 252, 252, 0.479);
 }
 .chatea:hover{
-    color: #F8680C;
+    background-color: orangered;
+    text-shadow: .2rem .2rem .1rem rgba(10, 10, 10, 0.712);
 }
+
 .nuestras{
     margin-top: 70px;
 }
@@ -309,6 +388,11 @@ button {
 .siguenos{
     text-align: center;
     margin-top: 100px;
+    padding: 1rem;
+    background-image: linear-gradient(rgba(33, 107, 218, 0.479), rgba(3, 3, 3, 0.479));
+    margin-bottom: 0;
+    font-size: 20px;
+    font-style: oblique;
 }
 
 .contact-container{
@@ -348,20 +432,22 @@ p {
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    width: 100%;
+    margin-bottom: 0;
+}
+#redes_div a{
+    background-color: rgba(0, 128, 0, 0);
 }
 
-/* aca lo que hice fue sacarle e widht de 100%*/
 .mapa_1 {
     margin-top:70px;
-    margin-bottom:50px;
     justify-content: center;
     text-align: center;
+    width: 100%;
+    height: 30vh;
 }
 
-.img_correo{
-    width: 50px;
-    margin-right: 200px;
-}
+
 
 .email{
     color: whitesmoke;
@@ -370,10 +456,7 @@ link:hover{
     color: aquamarine;
 }
 
-.siguenos{
-    font-size: 20px;
-    font-style: oblique;
-}
+
 
 .fotos_redes{
     width: 100px;
@@ -389,13 +472,12 @@ link:hover{
     font-size: 40px;
 }
 
-footer {
+#footer{
     background-color: #553;
-    width: 100%;
     color: white;
     text-align: center;
     padding: 0.5em;
-    margin-top: 3rem;
+
 }
 
 #horarios{
@@ -465,22 +547,21 @@ button:hover{
     margin-bottom: 50px;
 }
 
-#lista_requisitos{
-    display: flex;
-    flex-direction: column;
-    list-style: square;
-    background-color: #06060695;
-    width: 600px;
-    margin: auto;
-    padding: 100px;
-    padding-left: 150px;
-    padding-right: 150px;
-    margin-bottom: 15px;
-    font-size: 18px;
+.lista_req{
+    margin: 1.5rem;
+}
+.lista_req::before{
+    content: "➡️    "
 }
 
-.lista_req{
-    background-color: #8d701f;
+#lista_requisitos {
+    text-align: left;
+    margin: auto;
+    width: fit-content;
+}
+#requisitos{
+    background-color: #86580450;
+    padding: 1rem 0 1rem 0;
 }
 
 #titulo_curso{
@@ -493,63 +574,180 @@ button:hover{
     padding-right: 100px;
 }
 
+#volver{
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    border-radius: .2rem;
+    border:solid .2rem rgb(255, 166, 0);
+    background-color: white;
+    box-shadow: .2rem .2rem .2rem rgb(247, 247, 247);
+}
+
+.bienve{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 #parrafo_curso{
-    width: 800px;
+    width: fit-content;
     margin: auto;
-    background-color: #030303b9;
     padding: 50px;
+    margin-top: 1.5rem;
 }
 
-#requisitos{
-    text-align: center;
-    margin: auto;
-}
 
+#lista_menu a:hover{
+    padding: .5rem;
+}
 #curso_form{
     background-image: linear-gradient(rgba(5, 7, 12, 0.45),rgba(5, 7, 12, 0.45)),url(imagenes_logo/fondo_ladrillo.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 70%;
-    height: 800px;
+    height: 45rem;
     margin: auto;
     padding-top: 70px;
     padding-bottom: 70px;
+    margin-bottom: 2rem;
+}
+#formu{
+    width: 25vw;
+    height: 20vw;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.438), rgba(0, 0, 255, 0.37));
+    display: none;
+    position: fixed;
+    top: 5rem;
+    left: 35vw;
+    z-index: 2;
+    animation: entradaForm 2s ease forwards; 
+    border-radius: .5rem;
+}
+@keyframes entradaForm{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 2;
+    }
+}
+
+.footer_curso{
+    background-color: #553;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+
 }
 
 iframe:hover{
-    transform: scale(1.2);
+    background-color: #030303a1;
 }
-iframe{
-    background-color: #F8680C;
-    padding: 20px;
+
+#log:hover{
+    cursor: pointer;
+}
+.videos iframe{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.404), rgba(255, 136, 0, 0.863));
+    padding: 10px;
     margin-top: 5rem;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .5rem white;
 }
 #menu_hamburguesa{
     display: none;
 }
 
+
 @media screen and (max-width:991px){
+    #enviar{
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+    #h2_curso_form{
+        margin-top: 0;
+    }
+    #message{
+        width: 80vw;
+        margin-bottom: 2rem;
+    }
+    .formulario_curso{
+        position: absolute;
+        left: 2rem;
+        padding: 0;
+    }
+    #formulario_curso input{
+        width: 80vw;
+    }
+    #correo{
+        margin-bottom: 1rem;
+    }
+    .footer_curso{
+        font-size: 70%;
+    }
+    #curso_form{
+        width: 100%;
+        height: 48rem;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    #parrafo_curso {
+        width: 70%;
+        margin-left: 0;
+        padding-left: .5rem;
+    }
+    ul p{
+        display: block;
+        background-color: #4df50aa6;
+        width: 8rem;
+        border-radius: .5rem;
+        padding-left: 4rem;
+        margin-left: 0;
+        text-align: left;
+        animation: menu .5s ease-out forwards;
+    }
+    @keyframes menu {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
     #nav{
         background-color: rgba(10, 4, 0, 0.195);
     }
     footer{
-        width: 95vw;
+        width: 100vw;
     }
+
     #menu_hamburguesa{
         display: flex;
-        top: 0;
+        position: fixed;
+        left: 10rem;
+        margin-top: 2rem;
+        background-color: #f1740d56;
+        color: white;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: .5rem;
+        font-size: 2rem;
     }
-    #lista_menu.active {
-        display: flex;
-        flex-direction: column;
-        background-color: none;
-    }
+
     #lista_menu{
         display: none;
         font-size: 1rem;
         gap: .5rem;
         padding-top: 3rem;
+        animation: menu .5s  ease-out forwards;
+        background-color: #03030377;
     }
     body{
         width: 100%;
@@ -560,22 +758,22 @@ iframe{
         margin-left: .5rem;
         margin-left: 1rem;
     }
-
-    a{
+    a, #log{
         display: flex;
-        background-color: rgba(248, 126, 4, 0.55);
+        background-color: rgba(248, 126, 4, 0.582);
         padding: 1rem;
-        width: 8rem;
+        width: 10rem;
         border-radius: .5rem;
+        margin-bottom: .5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1rem;
     }
-    a#guasap{
-        background-color: rgba(0, 0, 0, 0);
-        background-size: cover;
-    }
+
     #nav{
         display: inline-block;
+        background-image: none;
     }
-
+    
     #imi{
         width: 100%;
     }
@@ -602,38 +800,24 @@ iframe{
     #locacion{
         width: 100%;
     }
-    #redes_div{ 
-        background-color: none; 
-        display: flex;
-    }
-
-    #formulario{
-        width: 80%;
-    }
-    .redes{
-        width: 100%;
-        background-color: none;
-        display: flex;
-        justify-content: center;
-    }
 
     .contact-container{
-        display: inline;
+        margin-left: 2rem;
     }
+
     .videos{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
     }    
-    .chat_azul{
-        right: 4rem;
-        top: 2rem;
-    }
+
     #chat_azul{
         width: 5rem;
         position: fixed;
         right: 1rem;
+        bottom: 1rem;
+        opacity: 1;
     }
 
     .foto_seminario{
@@ -643,13 +827,14 @@ iframe{
         width: 100%;
     }
 
-
     #seccion_venta{
         display:flex;
         flex-direction: column;
     }
     .chatea{
-        margin-bottom: 15px;
+        margin: auto;
+        gap: 1rem;
+        padding: 0;
     }
     .nota_espectador{
         margin-bottom: 20px;
@@ -660,5 +845,24 @@ iframe{
     .encabezado_imagen{
         width: 100vw;
         background-image: url(imagenes_logo/logo_ag_negro.png);
+    }
+    #formulario{
+        width: 80%;
+        height: 80rem;
+    }
+    #contacto_form{
+        width: 100%;
+        height: 50rem;
+    }
+    #formulario a{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    #formu{
+        width: 70vw;
+        height: 15rem;
+        left: 5rem;
+    }
+    .cerrarForm{
+        margin-left: 4.5rem;
     }
 }
