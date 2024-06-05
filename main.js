@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-
-const menuBtn = document.getElementById('menu-icon');
-const menuList = document.querySelector('nav .menu');
-// Funciones
-function toggle(element, className = "active"){
-    element.classList.toggle(className);
-}
-// Eventos
-menuBtn.onclick = () => toggle(menuList);
-document.addEventListener("DOMContentLoaded", function() {
-=======
 /*document.addEventListener("DOMContentLoaded", function() {
->>>>>>> agkm
     const menu_btn = document.getElementById("menu_hamburguesa");
     const menu_list = document.getElementById("lista_menu");
 
@@ -22,10 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function toggle(element, className = "active") {
         element.classList.toggle(className);
     }
-<<<<<<< HEAD
-});
-
-=======
 });*/
 
 function abrir(){
@@ -50,4 +33,3 @@ let volver = document.getElementById("volver")
 volver.addEventListener("click", ()=>{
     window.location.href = "index.html"
 })
->>>>>>> agkm
