@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de Instructor</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div>
-        <h1>Bienvenido al Curso de Instructor!</h1>
+        <button id="volver">Volver al inicio</button>
+        <h1 class="bienve">Bienvenido al Curso de Instructor!</h1>
     </div>
     <div id="requisitos">
-        <h3 id="titulo_curso">Si contas con al menos uno de estos requisitos ya estas habilitado para inscribirte:</h3>
-        <ul id="lista_requisitos">
+        <h3 id="titulo_curso container">Si contas con al menos uno de estos requisitos ya estas habilitado para inscribirte:</h3>
+        <ul id="lista_requisitos" class="container list-group-item">
             <li class="lista_req">Tener dos niveles alcanzados en el sistema.</li>
             <li class="lista_req">Ser cinturón negro de algún arte marcial</li>
             <li class="lista_req">Ser competidor de deportes de contacto o artes marciales.</li>
@@ -44,7 +46,7 @@
 
         </p>
     </div>
-    <section id="curso_form">
+    <section id="curso_form" class="container">
         <div>
             <form id="formulario_curso" action="formulario.php" method="POST">
                 <h2 id="h2_curso_form">Inscribite aquí:</h2>
@@ -57,10 +59,16 @@
                     <input type="tel" name="tel" id="phone" placeholder="Teléfono (Opcional)"><br>
                     <textarea name="consulta" id="message" cols="22" rows="10" placeholder="Contanos brevemente con cual o cuales de los requisitos cumplís"></textarea> <br>
                     <button id="enviar" type="submit">Enviar</button>
-                    <a href="index.html"></a>
                     <input type="hidden" name="_next" value="www.kravmagauy.com">
                     <input type="hidden" name="_captcha" value="True">
                 </div>
             </form>
+        </div>
+    </section>
+    <div class="footer_curso">
+        <span>
+            &copy; 2024 AG Krav Maga - Montevideo, Uruguay. Todos los derechos reservados. 
+        </span>
+    </div>
 </body>
 </html>

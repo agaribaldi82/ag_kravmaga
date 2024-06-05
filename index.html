@@ -23,8 +23,21 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tauri&display=swap" rel="stylesheet">
     <script src="main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </head>    
     <body>
+        <div id="formu">
+            <form action="/acceso_login" method="post" id="form">
+                <div class="email">
+                    <input type="text" class="etiqueta" id="email2" name="usuario" placeholder="Usuario">
+                </div>
+                <div class="contraseña">
+                    <input type="password" class="etiqueta" id="pwd" name="password" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="submit">Ingresar</button>
+                <p class="cerrarForm" onclick="cerrar_form()">Cerrar</p>
+            </form>
+        </div>
         <header class="encabezado_imagen">
             <nav id="nav">
                 <ul id="lista_menu" class="list_menu">
@@ -35,13 +48,15 @@
                     <li><a href="galeria.html" target="_blank">Galeria</a></li>
                     <li><a href="tienda.html" target="_blank">Tienda</a></li>
                     <li><a href="curso_instructor.html" target="_blank">Cursos</a></li>
-                    <li><a href="templates/login.html" target="_blank">Login</a></li>
+                    <li id="log" onclick="login()">Login</li>
                     <li><a href="#contact">Contacto</a></li>
+                    <p id="cerrar" onclick="cerrar()">Cerrar</p>
                 </ul>
-                <div id="menu_hamb">
-                    <button  id="menu_hamburguesa">&equiv;</button>
-                </div>
+                
             </nav>
+            <div id="menu_hamb">
+                <button  id="menu_hamburguesa" onclick="abrir()">&equiv;</button>
+            </div>
         </header>
         <div class="chat_azul">
             <a id="guasap" href="https://wa.me/+59899002018" target="_blank"><img id="chat_azul" src="imagenes_logo/whatsapp1.png" alt=""></a>
@@ -153,10 +168,9 @@
             <section id="contact">
                 <h2>Contacto</h2>
                 <p class="contacto_p">¡Contáctanos por Whatsapp o Correo electrónico para más información!</p><br>
-    
                 <div class="contact-container">
-                    <a class="chatea" href="https://wa.me/+59899002018" target="_blank">Chatea con nosotros <img class="chat" src="imagenes_logo/whatsapp1.png" alt=""></a>
-                    <a class="chatea" href="mailto: agaribaldi@kravmagauy.com">Email<img class="img_correo" src="imagenes_logo/email.png"> </a>
+                    <a class="chatea" id="correo" href="mailto: agaribaldi@kravmagauy.com">Correo Electrónico<img class="img_correo" src="imagenes_logo/email.png"></a>
+                    <a class="chatea" href="https://wa.me/+59899002018" target="_blank">Chatea con nosotros<img class="chat" src="imagenes_logo/whatsapp1.png" alt=""></a>
                 </div>
             </section>
             <section id="contacto_form">
@@ -171,15 +185,16 @@
                     <input type="hidden" name="_next" value="www.kravmagauy.com">
                     <input type="hidden" name="_captcha" value="True">
                 </form> 
-                <div id="redes_div">
-                    <h2 id="titulo_insta" class="siguenos">Síguenos en Instagram:</h2>
-                    <p id="insta">Click aquí ⬇️</p>
-                    <a id="redes" href="https://www.instagram.com/ag_kravmaga" target="_blank"><img width="128" height="128" src="https://img.icons8.com/cute-clipart/128/instagram-new.png" alt="instagram-new"/>
-                    </a>
-                    <h2 class="siguenos">Tiktok:</h2>
-                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@agkravmaga" data-unique-id="agkravmaga" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@agkravmaga?refer=creator_embed">@agkravmaga</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-                </div>
+               
             </section>
+            <div id="redes_div">
+                <h2 id="titulo_insta" class="siguenos">Síguenos en Instagram:</h2>
+                <p id="insta">Click aquí ⬇️</p>
+                <a id="redes" href="https://www.instagram.com/ag_kravmaga" target="_blank"><img width="128" height="128" src="https://img.icons8.com/cute-clipart/128/instagram-new.png" alt="instagram-new"/>
+                </a>
+                <h2 class="siguenos">Tiktok:</h2>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@agkravmaga" data-unique-id="agkravmaga" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@agkravmaga?refer=creator_embed">@agkravmaga</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
         </section>
         <footer>
             <h2 id="titulo_direccion">
