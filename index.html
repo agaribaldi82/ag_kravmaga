@@ -24,6 +24,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Tauri&display=swap" rel="stylesheet">
     <script src="main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "adCZaAiAv1DBjfJhF",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_28wp5l7', 'template_de9e0ar', this)   
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>    
     <body>
         <div id="formu">
@@ -108,21 +134,22 @@
             <section id="about">
                 <h2>Acerca de nosotros</h2>
                 <p>
-                    Somos un centro dedicado a enseñar Krav Maga<img class="clase_eyal" src="imagenes_logo/clase_eyal.jpg" alt="KMG Uruguay" title="Seminario con Eyal">, la técnica de defensa personal utilizada por las fuerzas de seguridad en la mayoría de los países del mundo.<br>
+                    Somos un centro dedicado a enseñar Krav Maga<img class="clase_eyal" src="imagenes_logo/b&w.jpg" alt="KMG Uruguay" title="Seminario con Eyal">, la técnica de defensa personal utilizada por las fuerzas de seguridad en la mayoría de los países del mundo.<br>
 
                     Krav Maga es un sistema de defensa personal desarrollado en Israel que se centra en la eficacia y la simplicidad. Fue desarrollado inicialmente en la década de 1930 por Imi Lichtenfeld, quien lo creó a partir de sus experiencias en luchas callejeras y su entrenamiento en deportes de combate y defensa personal.<br>
 
                     La filosofía detrás del Krav Maga es proporcionar a las personas, independientemente de su tamaño o fuerza física, habilidades prácticas y efectivas para defenderse en situaciones de vida o muerte. A diferencia de muchos estilos de artes marciales, Krav Maga no está diseñado para ser un deporte competitivo. Se enfoca en movimientos instintivos y técnicas simples que pueden ser aprendidos y aplicados rápidamente.<br>
 
                     Los principios del Krav Maga incluyen:<br>
+                </p>
+                <ul>
+                    <li>Neutralización del ataque: Enfocarse en detener la amenaza lo más rápido posible.</li>
+                    <li>Movimientos naturales: Utilizar movimientos naturales del cuerpo para maximizar la eficiencia.</li>
+                    <li>Defensa contra varios ataques: Entrenamiento para enfrentar situaciones en las que hay múltiples agresores.</li>
+                    <li>Uso de objetos cotidianos: Aprender a utilizar objetos cotidianos como herramientas de defensa.</li>
 
-                    Neutralización del ataque: Enfocarse en detener la amenaza lo más rápido posible.
-                    Movimientos naturales: Utilizar movimientos naturales del cuerpo para maximizar la eficiencia.
-                    Defensa contra varios ataques: Entrenamiento para enfrentar situaciones en las que hay múltiples agresores.
-                    Uso de objetos cotidianos: Aprender a utilizar objetos cotidianos como herramientas de defensa.
-                    Krav Maga se ha vuelto popular a nivel mundial como un sistema de defensa personal efectivo y se enseña en muchos países. Se utiliza en entrenamiento militar, fuerzas de aplicación de la ley y también está disponible para civiles que desean aprender habilidades prácticas de autodefensa.
-                </p> <br>
-
+                </ul>
+                <p>Krav Maga se ha vuelto popular a nivel mundial como un sistema de defensa personal efectivo y se enseña en muchos países. Se utiliza en entrenamiento militar, fuerzas de aplicación de la ley y también está disponible para civiles que desean aprender habilidades prácticas de autodefensa.</p>
             
                 <div>
                     <h2>
@@ -144,12 +171,12 @@
             </div>
             <p>
                 Ofrecemos clases para todos los niveles y edades, desde principiantes hasta expertos.<br>
-                Contamos con clases para ambos sexos en el horario nocturno y matutino; en la tarde clases para los mas chicos a prartir de los 7 años de edad. <br><br>
+                Contamos con clases para ambos sexos en el horario nocturno y matutino;<br><br>
                 Consulta por las clases particulares en nuestra academia o tu espacio!
             </p>
     
             <div id="cartel_horarios">
-                <img id="horarios" src="imagenes_logo/horarios24.png" alt="Nuestros Horarios" title="Horarios de clase">
+                <img id="horarios" src="imagenes_logo/TE ESTAMOS BUSCANDO.png" alt="Nuestros Horarios" title="Horarios de clase">
             </div>
         </section>
         <section>
@@ -177,11 +204,11 @@
                 <form class="formulario form_inicio" id="formulario" action="https://formsubmit.co/agaribaldi@kravmagauy.com" method="POST">
                     <h2 class="h2_formulario">Ingresa tu consulta:</h2>
                     <label for="name"></label>
-                    <input type="text" name="name" id="name" placeholder="Nombre" required><br>
+                    <input type="text" name="user_name" id="name" placeholder="Nombre" required><br>
                     <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="Correo Electrónico" required><br>
+                    <input type="email" name="user_email" id="email" placeholder="Correo Electrónico" required><br>
                     <label for="tel"></label>
-                    <input type="tel" name="tel" id="phone" placeholder="Telefono" required><br>
+                    <input type="tel" name="contact_number" id="phone" placeholder="Telefono" required><br>
                     <textarea name="message" id="message" cols="22" rows="10" placeholder="Ingrese su consulta"></textarea> <br>
                     <button id="enviar" type="submit">Enviar</button>
                     <input type="hidden" name="_next" value="www.kravmagauy.com">

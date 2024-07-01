@@ -250,6 +250,9 @@ input{
 
 #chat_azul:hover{
     transform: rotate(15deg);
+    border-radius: 3rem;
+    box-shadow: .2rem .2rem .2rem white;
+    transform: scale(1.2);
 }
 
 .cuadro_texto{
@@ -409,7 +412,7 @@ a.chatea{
     margin-top: 70px;
 }
 
-p {
+p, #about li {
     text-align: justify;
     font-family: sans-serif;;
     line-height: 2.5rem;
@@ -472,7 +475,7 @@ link:hover{
 }
 
 #footer{
-    font-size: 50%;
+    font-size: 100%;
     background-color: #553;
     color: white;
     text-align: center;
@@ -536,6 +539,9 @@ button:hover{
 }
 #redes{
     margin: auto;
+}
+#redes:hover{
+    box-shadow: .5rem .5rem .5rem white;
 }
 #insta{
     text-align: center;
@@ -608,6 +614,13 @@ button:hover{
     padding-bottom: 70px;
     margin-bottom: 2rem;
 }
+
+#about li{
+    left: 0;
+    font-size: 1.4rem;
+    text-align: left;
+    margin-left: 6rem;
+}
 #formu{
     width: 25vw;
     height: 20vw;
@@ -639,6 +652,8 @@ button:hover{
 
 }
 
+
+
 iframe:hover{
     background-color: #030303a1;
 }
@@ -665,6 +680,13 @@ iframe:hover{
 }
 
 @media screen and (max-width:991px){
+    #about li{
+        margin-left: 0;
+    }
+    .clase_eyal{
+        width: 50%;
+        margin-top: 0;
+    }
     #enviar{
         margin-top: .5rem;
         margin-left: 0;
@@ -736,6 +758,7 @@ iframe:hover{
     }
     footer{
         width: 100vw;
+        font-size: 70%;
     }
 
     #menu_hamburguesa{
@@ -752,6 +775,7 @@ iframe:hover{
         align-items: center;
         border-radius: .5rem;
         font-size: 2rem;
+        z-index: 2;
     }
 
     #lista_menu{
