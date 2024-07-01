@@ -1,0 +1,127 @@
+body {
+    background-color: black;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: auto;
+    gap: 1rem;
+}
+div.formulario{
+    background-image: linear-gradient(black, rgba(255, 166, 0, 0.637), black);
+    width: 40vw;
+    margin: auto;
+    padding: 2rem 0 4rem 0;
+    border-radius: .5rem;
+}
+
+input{
+    color: white;
+    border-radius: .5rem;
+    height: 5vh;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.137);
+}
+
+input:focus{
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+
+}
+
+#btn {
+    margin-top: 1.5rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.411), rgba(248, 123, 6, 0.918));
+    box-shadow: .2rem .2rem .2rem white;
+}
+
+#btn:hover {
+    box-shadow: .3rem .3rem .3rem white;
+    color: white;
+}
+
+.imagen{
+    text-align: center;
+}
+
+.foto {
+    width: 40vw;
+}
+
+.house {
+    position: absolute;
+    box-shadow: .2rem .2rem 1rem white;
+    top: 2rem;
+    left: 4rem;
+    width: 4rem;
+    border-radius: .5rem;
+}
+.house:hover {
+    box-shadow: .2rem .2rem .8rem orange;
+}
+
+.videos {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    top: 10rem;
+    left: 2rem;
+    gap: 2rem;
+    box-shadow: .2rem .2rem .5rem white;
+}
+
+.redes {
+    display: flex;
+    position: relative;
+    top: 45rem;
+    left: 1.5rem;
+    background-image: linear-gradient(black, orange, black);
+    width: 19.5rem;
+    justify-content: space-around;
+    border-radius: .5rem;
+    text-align: center;
+
+}
+
+.iconos {
+    position: relative;
+}
+
+.iconos:hover {
+    box-shadow: .2rem .2rem .5rem white;
+}
+
+@media screen and (max-width:778px){
+    .foto {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .videos {
+        display: none;
+    }
+    .redes {
+        top: 0;
+        left: 5.5rem;
+    }
+    .house {
+        top: 1rem;
+        left: 2rem;
+        width: 2.5rem;
+    }
+    #formulario {
+        display: flex;
+        width: 85%;
+        max-width: 100%;
+        background-color: rgba(0, 128, 0, 0.329);
+    }
+    input {
+        width: 18rem;
+    }
+    .form {
+        text-align: left;
+        margin-left: 1rem;
+    }
+}
