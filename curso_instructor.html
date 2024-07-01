@@ -6,6 +6,32 @@
     <title>Curso de Instructor</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "adCZaAiAv1DBjfJhF",
+        });
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('enviar3').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm('service_28wp5l7', 'template_de9e0ar', this)   
+                .then(() => {
+                    console.log('SUCCESS!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+</script>
 </head>
 <body>
     <div>
@@ -48,17 +74,17 @@
     </div>
     <section id="curso_form" class="container">
         <div>
-            <form id="formulario_curso" action="formulario.php" method="POST">
+            <form id="formulario_curso" action="https://formsubmit.co/agaribaldi@kravmagauy.com" method="POST">
                 <h2 id="h2_curso_form">Inscribite aquí:</h2>
                 <div class="formulario_curso">
                     <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required><br>
-                    <input type="text" name="name" id="edad" placeholder="Edad" required><br>
-                    <input type="text" name="name" id="nacimiento" placeholder="Fecha de Nacimiento" required><br>
-                    <input type="text" name="name" id="ci" placeholder="Cédula de Identidad" required><br>
+                    <input type="text" name="edad" id="edad" placeholder="Edad" required><br>
+                    <input type="text" name="fecha_nacimiento" id="nacimiento" placeholder="Fecha de Nacimiento" required><br>
+                    <input type="text" name="cedula" id="ci" placeholder="Cédula de Identidad" required><br>
                     <input type="email" name="email" id="email" placeholder="Correo Electrónico" required><br>
                     <input type="tel" name="tel" id="phone" placeholder="Teléfono (Opcional)"><br>
                     <textarea name="consulta" id="message" cols="22" rows="10" placeholder="Contanos brevemente con cual o cuales de los requisitos cumplís"></textarea> <br>
-                    <button id="enviar" type="submit">Enviar</button>
+                    <button id="enviar3" type="submit">Enviar</button>
                     <input type="hidden" name="_next" value="www.kravmagauy.com">
                     <input type="hidden" name="_captcha" value="True">
                 </div>

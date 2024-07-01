@@ -1,10 +1,21 @@
 "use strict";
 
-var enviar = document.querySelector("#enviar");
+var enviar2 = document.querySelector("#enviar2");
 
-if (enviar) {
-  enviar.addEventListener("click", function () {
-    alert("¡Gracias por contactarnos! En breve responderemos su consulta."); //window.location.href = "index.html";
+if (enviar2) {
+  enviar2.addEventListener("click", function (event2) {
+    var user_name = document.getElementById("user_name").value;
+    var user_lastname = document.getElementById("user_phone").value;
+    var user_email = document.getElementById("user_email").value;
+    var user_message = document.getElementById("user_message").value;
+
+    if (user_name === "" || user_phone === "" || user_email === "" || user_message === "") {
+      event2.preventDefault();
+      alert("Por favor complete todos los campos");
+    } else {
+      alert("¡Gracias por contactarnos! En breve responderemos su consulta.");
+      window.location.href = "index.html";
+    }
   });
 }
 
@@ -22,8 +33,8 @@ enviar_datos.addEventListener("click", function (event) {
   if (nombre === "" || apellido === "" || tel === "" || fecha_nac === "" || ci === "" || sociedad === "" || emergencia === "" || email === "") {
     event.preventDefault();
     alert("Por favor, complete todos los campos antes de enviar el formulario.");
-    window.location.href = "https://www.kravmagauy.com";
   } else {
     alert("Sus datos fueron ingresados con éxito");
+    window.location.href = "index.html";
   }
 });

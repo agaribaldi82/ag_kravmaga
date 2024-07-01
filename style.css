@@ -90,7 +90,7 @@ a, #log{
     margin-top: 0;
 }
 
-#enviar{
+#enviar2{
     background-color: #F8680C;
     color: white;
     font-weight: 900;
@@ -687,7 +687,7 @@ iframe:hover{
         width: 50%;
         margin-top: 0;
     }
-    #enviar{
+    #enviar2{
         margin-top: .5rem;
         margin-left: 0;
     }
